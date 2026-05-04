@@ -28,7 +28,7 @@ The focus is on clarity, usefulness, and a lightweight experience rather than un
 
 ## AI-Assisted Development
 
-My website was built with AI-assisted development. This repository includes an [`AGENTS.md`](./AGENTS.md) file, which provides structured instructions and context for AI coding agents. It defines expectations, constraints, and project-specific guidance to help keep contributions consistent and reliable.
+My website was built with **OpenAI Codex using GPT-5.5**. This repository includes an [`AGENTS.md`](./AGENTS.md) file, which provides structured instructions and context for AI coding agents. It defines expectations, constraints, and project-specific guidance to help keep contributions consistent and reliable.
 
 ## Contributions
 
