@@ -26,6 +26,62 @@ The focus is on clarity, usefulness, and a lightweight experience rather than un
 - Tailwind CSS
 - Cloudflare Pages
 
+## Test Locally
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Open the local site:
+
+   ```text
+   http://127.0.0.1:3000
+   ```
+
+4. Build the static production output:
+
+   ```bash
+   npm run build
+   ```
+
+5. Run linting:
+
+   ```bash
+   npm run lint
+   ```
+
+Manual checks:
+
+- Check `/` and `/about` on desktop and mobile widths.
+- Verify internal navigation works.
+- Verify external links open the correct destinations.
+
+## Deployment
+
+This site is deployed as a static Next.js export on Cloudflare Pages.
+
+Use these Cloudflare Pages settings:
+
+- Framework preset: `Next.js (Static HTML Export)`
+- Build command: `npm run build`
+- Build output directory: `out`
+- Deploy command: leave blank
+- Root directory: repository root
+
+Do not use `npx wrangler deploy` for this project. That command deploys through the Workers flow and expects Cloudflare to auto-configure a server-rendered Next.js Worker from `.next`. This site exports static files to `out`, so Cloudflare Pages should deploy the `out` directory directly.
+
+After the first successful deployment, connect `nathandarker.it` as a custom domain in Cloudflare Pages. Because the domain DNS is already managed in Cloudflare, Cloudflare can create or update the required DNS records from the Pages custom domain flow.
+
+If future features need secrets or deployment-specific values, store them as Cloudflare Pages environment variables rather than committing them to the repository.
+
 ## AI-Assisted Development
 
 My website was built with AI-assisted development. This repository includes an [`AGENTS.md`](./AGENTS.md) file, which provides structured instructions and context for AI coding agents. It defines expectations, constraints, and project-specific guidance to help keep contributions consistent and reliable.
