@@ -15,7 +15,7 @@ export const siteContent = {
     },
     {
       label: "GitHub",
-      href: "https://github.com/",
+      href: "https://github.com/aut0nate",
       ariaLabel: "Visit Nathan Darker's GitHub profile",
       icon: "github"
     },
