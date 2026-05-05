@@ -27,7 +27,7 @@ export const siteContent = {
     },
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/",
+      href: "https://www.linkedin.com/in/nathandarker/",
       ariaLabel: "Visit Nathan Darker's LinkedIn profile",
       icon: "linkedin"
     }
