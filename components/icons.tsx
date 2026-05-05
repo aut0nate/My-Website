@@ -44,6 +44,14 @@ export function GitHubIcon(props: IconProps) {
   );
 }
 
+export function XIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M18.9 2H22l-6.76 7.72L23.2 22h-6.24l-4.9-7.42L5.56 22H2.45l7.23-8.26L1.92 2h6.4l4.43 6.77L18.9 2Zm-1.09 18h1.72L7.39 3.9H5.54L17.81 20Z" />
+    </svg>
+  );
+}
+
 export function LinkedInIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>

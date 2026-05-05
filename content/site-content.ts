@@ -20,6 +20,12 @@ export const siteContent = {
       icon: "github"
     },
     {
+      label: "X",
+      href: "https://x.com/aut0nate",
+      ariaLabel: "Visit Nathan Darker's X profile",
+      icon: "x"
+    },
+    {
       label: "LinkedIn",
       href: "https://www.linkedin.com/",
       ariaLabel: "Visit Nathan Darker's LinkedIn profile",

@@ -132,7 +132,7 @@ img {
   justify-content: space-between;
   gap: 16px;
   min-height: clamp(48px, 4.4vw, 58px);
-  padding: 0 clamp(18px, 2vw, 26px) 0 clamp(20px, 2.2vw, 28px);
+  padding: 0 clamp(16px, 1.8vw, 22px) 0 clamp(18px, 1.9vw, 24px);
   border-radius: 12px;
   border: 2px solid rgba(255, 255, 255, 0.9);
   background: rgba(255, 255, 255, 0.012);
@@ -178,7 +178,50 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
   color: currentColor;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding-top: 12px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.012);
+  color: #f4f7fb;
+  backdrop-filter: blur(20px);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(164, 168, 178, 0.78);
+  background: rgba(128, 132, 142, 0.18);
+  color: rgba(184, 188, 198, 0.96);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+.social-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -209,6 +252,17 @@ img {
 
   .quick-link-label {
     font-size: 0.98rem;
+  }
+
+  .social-links {
+    gap: 12px;
+    margin-top: 0;
+    padding-top: 12px;
+  }
+
+  .social-link {
+    width: 54px;
+    height: 54px;
   }
 
   .avatar-medium {
