@@ -32,19 +32,6 @@ export default function AboutPage() {
             {siteContent.about.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
-
-            <div className="space-y-3">
-              <h2 className="text-lg font-semibold text-ink sm:text-xl">Outside of technology</h2>
-              <ul className="list-disc space-y-2 pl-6 marker:text-slate-300">
-                {siteContent.about.interests.map((interest) => (
-                  <li key={interest.title}>
-                    <span className="font-medium text-ink">{interest.title}</span>
-                    {" - "}
-                    <span>{interest.description}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </section>
         </div>
       </PageFrame>
