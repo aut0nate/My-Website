@@ -58,7 +58,7 @@ export function HomeCard() {
 
         <section className="flex min-w-0 flex-col justify-center gap-3 self-stretch lg:pl-0 xl:gap-5">
           <Link href="/about">
-            <QuickLink label="About Me" icon={<PersonIcon className="h-8 w-8" />} />
+            <QuickLink label="About" icon={<PersonIcon className="h-8 w-8" />} />
           </Link>
           {blogLink ? (
             <a
