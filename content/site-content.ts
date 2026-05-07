@@ -66,6 +66,13 @@ export const siteContent = {
           "A gallery and workspace for AI-generated images and visual experiments.",
         siteUrl: "https://images.autonate.dev/",
         githubUrl: "https://github.com/aut0nate/AI-Art-Hub"
+      },
+      {
+        name: "The Collection",
+        description:
+          "A curated collection of useful links, resources, and references.",
+        siteUrl: "https://collection.autonate.dev/",
+        githubUrl: "https://github.com/aut0nate/The-Collection"
       }
     ]
   },
