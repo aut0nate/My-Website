@@ -8,6 +8,12 @@ export const siteContent = {
     "👋🏻 Hi, I’m Nathan, a UK-based technical professional working in DevOps environments, with a focus on cloud-native systems, Linux, Docker, and AI.",
   links: [
     {
+      label: "Projects",
+      href: "/projects",
+      ariaLabel: "View Nathan Darker's agentic coding projects",
+      icon: "projects"
+    },
+    {
       label: "Blog",
       href: "https://blog.nathandarker.it",
       ariaLabel: "Visit Nathan Darker's blog",
@@ -42,6 +48,26 @@ export const siteContent = {
       "Outside of technology, I have a strong interest in football, photography, history, and travel."
     ],
     interests: []
+  },
+  projects: {
+    intro:
+      "A showcase of apps and tools I have built using agentic coding tools, self hosted on my VPS via Docker.",
+    items: [
+      {
+        name: "Prompt Vault",
+        description:
+          "A practical prompt library for saving, organising, and reusing AI prompts.",
+        siteUrl: "https://prompts.autonate.dev/",
+        githubUrl: "https://github.com/aut0nate/Prompt-Vault"
+      },
+      {
+        name: "AI Art Hub",
+        description:
+          "A gallery and workspace for AI-generated images and visual experiments.",
+        siteUrl: "https://images.autonate.dev/",
+        githubUrl: "https://github.com/aut0nate/AI-Art-Hub"
+      }
+    ]
   },
   footer: "© nathandarker.it. All rights reserved."
 } as const;

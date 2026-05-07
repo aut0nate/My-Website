@@ -26,6 +26,17 @@ export function PersonIcon(props: IconProps) {
   );
 }
 
+export function ProjectsIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="M4.75 5.75h5.5v5.5h-5.5z" />
+      <path d="M13.75 5.75h5.5v5.5h-5.5z" />
+      <path d="M4.75 14.75h5.5v3.5h-5.5z" />
+      <path d="M13.75 14.75h5.5v3.5h-5.5z" />
+    </IconBase>
+  );
+}
+
 export function RssIcon(props: IconProps) {
   return (
     <IconBase {...props}>

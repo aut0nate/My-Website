@@ -4,6 +4,7 @@ import {
   GitHubIcon,
   LinkedInIcon,
   PersonIcon,
+  ProjectsIcon,
   RssIcon,
   XIcon
 } from "@/components/icons";
@@ -12,10 +13,17 @@ import { QuickLink } from "@/components/quick-link";
 import { siteContent } from "@/content/site-content";
 
 export function HomeCard() {
-  const socialLinks = siteContent.links.filter((link) => link.icon !== "rss");
+  const socialLinks = siteContent.links.filter(
+    (link) => link.icon !== "rss" && link.icon !== "projects"
+  );
   const blogLink = siteContent.links.find((link) => link.icon === "rss");
+  const projectsLink = siteContent.links.find((link) => link.icon === "projects");
 
   function renderIcon(icon: string) {
+    if (icon === "projects") {
+      return <ProjectsIcon className="h-8 w-8" />;
+    }
+
     if (icon === "rss") {
       return <RssIcon className="h-8 w-8" />;
     }
@@ -69,6 +77,14 @@ export function HomeCard() {
             >
               <QuickLink label={blogLink.label} icon={renderIcon(blogLink.icon)} />
             </a>
+          ) : null}
+          {projectsLink ? (
+            <Link href={projectsLink.href} aria-label={projectsLink.ariaLabel}>
+              <QuickLink
+                label={projectsLink.label}
+                icon={renderIcon(projectsLink.icon)}
+              />
+            </Link>
           ) : null}
 
           <div className="social-links" aria-label="Social links">
