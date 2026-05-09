@@ -1,5 +1,7 @@
 # My Website
 
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)
+
 ## Introduction
 
 Welcome to `nathandarker.it` - my personal website and central profile, hosted on Cloudflare Pages.
