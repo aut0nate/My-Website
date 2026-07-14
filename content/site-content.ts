@@ -5,7 +5,7 @@ export const siteContent = {
     alt: "Portrait avatar for Nathan Darker"
   },
   homeIntro:
-    "👋🏻 Hi, I’m Nathan, a UK-based technical professional working in DevOps environments, with a focus on cloud-native systems, Linux, Docker, and AI.",
+    "👋🏻 Hi, I’m Nathan, a UK-based technical professional working in DevOps environments, with a focus on cloud-native systems, Linux, Docker, Kubernetes and AI.",
   links: [
     {
       label: "Projects",
