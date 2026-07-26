@@ -1319,6 +1319,7 @@ a.yestera-support-button:focus-visible {
 
 .concept-footer.is-homepage {
   min-height: 84px;
+  align-items: center;
   justify-content: center;
   background: rgba(252, 252, 253, 0.985);
   color: #05070c;
