@@ -39,7 +39,7 @@ export function AppArtwork({
       alt: "AI Image Hub logo"
     },
     collection: {
-      src: "/images/apps/the-collection-logo.png",
+      src: "/images/apps/the-collection-logo-v2.svg",
       alt: "The Collection logo"
     }
   }[app.artwork];

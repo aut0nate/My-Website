@@ -1,0 +1,33 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+  aria-labelledby="collection-logo-title"
+>
+  <title id="collection-logo-title">The Collection</title>
+  <defs>
+    <linearGradient id="collection-navy" x1="96" y1="88" x2="412" y2="424" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#183b60" />
+      <stop offset="1" stop-color="#0b223d" />
+    </linearGradient>
+    <linearGradient id="collection-teal" x1="208" y1="184" x2="426" y2="258" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#25d8bd" />
+      <stop offset="1" stop-color="#16b99f" />
+    </linearGradient>
+    <linearGradient id="collection-light" x1="208" y1="278" x2="426" y2="352" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffef9" />
+      <stop offset="1" stop-color="#e6e9ed" />
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M394 108H232C148 108 98 173 98 256s50 148 134 148h162"
+    fill="none"
+    stroke="url(#collection-navy)"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="76"
+  />
+  <rect x="208" y="184" width="218" height="74" rx="37" fill="url(#collection-teal)" />
+  <rect x="208" y="278" width="218" height="74" rx="37" fill="url(#collection-light)" />
+</svg>
