@@ -23,7 +23,7 @@ export default function AboutPage() {
                 className="avatar-image object-cover"
               />
             </div>
-            <h1 className="site-editorial-heading mt-5 text-[2.4rem] tracking-tight text-ink sm:text-[3rem]">
+            <h1 className="site-editorial-heading site-display-title mt-5 text-ink">
               About Me
             </h1>
           </section>

@@ -4,6 +4,7 @@
 
 :root {
   color-scheme: dark;
+  --site-display-title-size: clamp(4rem, 8vw, 7.6rem);
 }
 
 html {
@@ -37,6 +38,10 @@ img {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
   letter-spacing: -0.045em;
+}
+
+.site-display-title {
+  font-size: var(--site-display-title-size);
 }
 
 .shell {
@@ -2016,7 +2021,7 @@ a.yestera-support-button:focus-visible {
 
 .library-heading h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(4rem, 8vw, 7.6rem);
+  font-size: var(--site-display-title-size);
   font-weight: 400;
   letter-spacing: -0.067em;
   line-height: 0.88;
