@@ -55,7 +55,7 @@ export function HomeCard() {
           </div>
 
           <div className="space-y-3">
-            <h1 className="text-[2.25rem] font-medium tracking-tight text-ink sm:text-[2.6rem] lg:text-[3rem] xl:text-[3.35rem]">
+            <h1 className="site-editorial-heading text-[2.25rem] tracking-tight text-ink sm:text-[2.6rem] lg:text-[3rem] xl:text-[3.35rem]">
               {siteContent.name}
             </h1>
             <p className="max-w-lg text-sm leading-7 text-slate-300 sm:text-[0.94rem] sm:leading-[1.65] xl:text-base xl:leading-[1.75]">

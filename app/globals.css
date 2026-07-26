@@ -33,6 +33,12 @@ img {
   max-width: 100%;
 }
 
+.site-editorial-heading {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
 .shell {
   min-height: 100vh;
   padding: clamp(24px, 5vh, 64px) clamp(18px, 4vw, 56px);

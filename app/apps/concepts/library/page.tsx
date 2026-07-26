@@ -22,7 +22,6 @@ export default function LibraryAppsConcept() {
             <span aria-hidden="true">←</span>
             <span>Back</span>
           </Link>
-          <p className="apps-eyebrow">{appsContent.eyebrow}</p>
           <h1>Apps</h1>
         </div>
         <div className="library-heading-copy">
