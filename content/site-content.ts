@@ -8,9 +8,9 @@ export const siteContent = {
     "👋🏻 Hi, I’m Nathan, a UK-based technical professional working in DevOps environments, with a focus on cloud-native systems, Linux, Docker, and AI.",
   links: [
     {
-      label: "Projects",
-      href: "/projects",
-      ariaLabel: "View Nathan Darker's agentic coding projects",
+      label: "Apps",
+      href: "/apps",
+      ariaLabel: "View Nathan Darker's iOS and web apps",
       icon: "projects"
     },
     {

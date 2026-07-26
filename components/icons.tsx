@@ -55,6 +55,16 @@ export function GitHubIcon(props: IconProps) {
   );
 }
 
+export function AppStoreIcon(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="m9.2 17.5 5.6-11" />
+      <path d="m10.1 6.5 6.1 11" />
+      <path d="M6.1 14.2h11.8" />
+    </IconBase>
+  );
+}
+
 export function XIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
