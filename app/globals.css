@@ -435,3 +435,742 @@ img {
     transition: none !important;
   }
 }
+
+/* Yestera — a quiet, editorial product surface within nathandarker.it. */
+
+.yestera-site {
+  --yestera-ink: #f6f0e5;
+  --yestera-muted: #a9a398;
+  --yestera-paper: #e8dfce;
+  --yestera-night: #0d1014;
+  --yestera-panel: #15191e;
+  --yestera-sun: #e2a55c;
+  --yestera-line: rgba(235, 226, 210, 0.16);
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--yestera-ink);
+  background:
+    radial-gradient(circle at 82% 9%, rgba(226, 165, 92, 0.12), transparent 22rem),
+    radial-gradient(circle at 8% 44%, rgba(97, 119, 140, 0.1), transparent 28rem),
+    linear-gradient(180deg, #0d1014 0%, #101318 58%, #0b0d10 100%);
+  font-family:
+    "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+.yestera-site::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.17;
+  background-image: url("/images/background-grid.png");
+  background-size: cover;
+  mix-blend-mode: soft-light;
+}
+
+.yestera-site a {
+  text-underline-offset: 0.22em;
+}
+
+.yestera-skip-link {
+  position: fixed;
+  z-index: 30;
+  top: 12px;
+  left: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #0d1014;
+  background: var(--yestera-paper);
+  transform: translateY(-150%);
+}
+
+.yestera-skip-link:focus {
+  transform: translateY(0);
+}
+
+.yestera-header,
+.yestera-footer,
+.yestera-hero,
+.yestera-manifesto,
+.yestera-features,
+.yestera-closing,
+.yestera-document {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.yestera-header {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid var(--yestera-line);
+}
+
+.yestera-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-size: 1.32rem;
+  letter-spacing: -0.025em;
+}
+
+.yestera-wordmark-icon {
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+.yestera-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 34px);
+  color: var(--yestera-muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.yestera-nav a {
+  position: relative;
+  padding-block: 12px;
+  transition: color 180ms ease;
+}
+
+.yestera-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 4px;
+  height: 1px;
+  background: var(--yestera-sun);
+  transition: right 180ms ease;
+}
+
+.yestera-nav a:hover,
+.yestera-nav a:focus-visible,
+.yestera-nav a[aria-current="page"] {
+  color: var(--yestera-ink);
+}
+
+.yestera-nav a:hover::after,
+.yestera-nav a:focus-visible::after,
+.yestera-nav a[aria-current="page"]::after {
+  right: 0;
+}
+
+.yestera-hero {
+  min-height: min(760px, calc(100vh - 92px));
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 116px);
+  padding-block: clamp(70px, 10vw, 132px);
+}
+
+.yestera-eyebrow,
+.yestera-section-kicker {
+  margin: 0;
+  color: var(--yestera-sun);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.yestera-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.yestera-eyebrow span {
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+
+.yestera-hero h1,
+.yestera-manifesto h2,
+.yestera-section-heading h2,
+.yestera-closing h2,
+.yestera-document h1,
+.yestera-support-notes h2,
+.yestera-contact-panel h2 {
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.yestera-hero h1 {
+  margin: 24px 0 26px;
+  font-size: clamp(3.35rem, 7vw, 6.5rem);
+  line-height: 0.93;
+}
+
+.yestera-hero h1 em {
+  color: var(--yestera-paper);
+  font-weight: 400;
+}
+
+.yestera-hero-summary {
+  max-width: 570px;
+  margin: 0;
+  color: #c7c0b4;
+  font-size: clamp(1.02rem, 1.55vw, 1.24rem);
+  line-height: 1.75;
+}
+
+.yestera-hero-actions {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px 28px;
+}
+
+.yestera-coming-soon,
+.yestera-support-button {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 21px;
+  border: 1px solid rgba(232, 223, 206, 0.8);
+  border-radius: 999px;
+  color: var(--yestera-night);
+  background: var(--yestera-paper);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.25);
+}
+
+a.yestera-support-button {
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+a.yestera-support-button:hover,
+a.yestera-support-button:focus-visible {
+  transform: translateY(-2px);
+  background: #fff7e8;
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.32);
+}
+
+.yestera-text-link {
+  color: var(--yestera-paper);
+  font-size: 0.88rem;
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: rgba(232, 223, 206, 0.35);
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease;
+}
+
+.yestera-text-link:hover,
+.yestera-text-link:focus-visible {
+  color: #fff8ed;
+  text-decoration-color: currentColor;
+}
+
+.yestera-hero-art {
+  position: relative;
+  min-height: 520px;
+  display: grid;
+  place-items: center;
+}
+
+.yestera-sun-disc {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  width: clamp(120px, 13vw, 176px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--yestera-sun);
+  box-shadow: 0 0 90px rgba(226, 165, 92, 0.22);
+}
+
+.yestera-photo-stack {
+  position: absolute;
+  width: min(75%, 380px);
+  aspect-ratio: 0.83;
+  border: 1px solid rgba(232, 223, 206, 0.18);
+  background:
+    linear-gradient(145deg, rgba(112, 127, 139, 0.3), rgba(14, 17, 21, 0.9)),
+    #1b2026;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.38);
+}
+
+.yestera-photo-stack-back {
+  transform: rotate(-9deg) translate(-42px, 6px);
+}
+
+.yestera-photo-stack-mid {
+  transform: rotate(8deg) translate(42px, 18px);
+}
+
+.yestera-icon-mount {
+  position: relative;
+  z-index: 2;
+  width: min(74%, 386px);
+  padding: clamp(16px, 2vw, 23px) clamp(16px, 2vw, 23px) clamp(24px, 3vw, 36px);
+  transform: rotate(-1.5deg);
+  color: #1a1b1c;
+  background: #eee6d8;
+  box-shadow:
+    0 38px 90px rgba(0, 0, 0, 0.48),
+    0 2px 1px rgba(255, 255, 255, 0.7) inset;
+}
+
+.yestera-app-icon {
+  width: 100%;
+  height: auto;
+}
+
+.yestera-icon-mount p {
+  margin: 22px 4px 0;
+  font-family: "Bradley Hand", "Segoe Print", cursive;
+  font-size: clamp(1.05rem, 2vw, 1.45rem);
+  transform: rotate(-1deg);
+}
+
+.yestera-manifesto {
+  min-height: 620px;
+  padding: clamp(84px, 12vw, 150px) clamp(28px, 8vw, 110px);
+  border-block: 1px solid var(--yestera-line);
+  background:
+    linear-gradient(110deg, rgba(25, 31, 38, 0.96), rgba(16, 19, 24, 0.75)),
+    #12171d;
+}
+
+.yestera-manifesto h2 {
+  margin: 24px 0 30px;
+  max-width: 850px;
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.98;
+}
+
+.yestera-manifesto h2 span {
+  color: var(--yestera-sun);
+}
+
+.yestera-manifesto > p:not(.yestera-section-kicker) {
+  max-width: 660px;
+  margin: 0;
+  color: #c7c0b4;
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+  line-height: 1.8;
+}
+
+.yestera-principles {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.yestera-principles span {
+  padding: 10px 15px;
+  border: 1px solid var(--yestera-line);
+  border-radius: 999px;
+  color: #d8d0c3;
+  background: rgba(255, 255, 255, 0.025);
+  font-size: 0.78rem;
+  letter-spacing: 0.035em;
+}
+
+.yestera-features {
+  padding-block: clamp(90px, 12vw, 152px);
+}
+
+.yestera-section-heading {
+  max-width: 760px;
+  margin-bottom: 62px;
+}
+
+.yestera-section-heading h2 {
+  margin: 18px 0 0;
+  font-size: clamp(2.75rem, 5.7vw, 5.5rem);
+  line-height: 1;
+}
+
+.yestera-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--yestera-line);
+}
+
+.yestera-feature-grid article {
+  min-height: 285px;
+  padding: 36px clamp(20px, 4vw, 52px) 42px 0;
+  border-bottom: 1px solid var(--yestera-line);
+}
+
+.yestera-feature-grid article:nth-child(even) {
+  padding-left: clamp(20px, 4vw, 52px);
+  border-left: 1px solid var(--yestera-line);
+}
+
+.yestera-feature-number {
+  color: var(--yestera-sun);
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 0.88rem;
+}
+
+.yestera-feature-grid h3 {
+  margin: 42px 0 14px;
+  max-width: 400px;
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-size: clamp(1.55rem, 2.6vw, 2.35rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.yestera-feature-grid p {
+  max-width: 460px;
+  margin: 0;
+  color: var(--yestera-muted);
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.yestera-closing {
+  margin-bottom: 72px;
+  padding: clamp(42px, 7vw, 78px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 42px;
+  border: 1px solid var(--yestera-line);
+  background:
+    radial-gradient(circle at 90% 15%, rgba(226, 165, 92, 0.14), transparent 13rem),
+    rgba(22, 26, 31, 0.84);
+}
+
+.yestera-closing h2 {
+  max-width: 720px;
+  margin: 18px 0 0;
+  font-size: clamp(2.6rem, 5.5vw, 5.4rem);
+  line-height: 0.98;
+}
+
+.yestera-footer {
+  padding-block: 36px 46px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 22px 40px;
+  border-top: 1px solid var(--yestera-line);
+  color: var(--yestera-muted);
+  font-size: 0.78rem;
+}
+
+.yestera-footer-brand {
+  color: var(--yestera-ink);
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 1.3rem;
+}
+
+.yestera-footer p {
+  margin: 7px 0 0;
+}
+
+.yestera-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.yestera-footer-links a:hover,
+.yestera-footer-links a:focus-visible {
+  color: var(--yestera-ink);
+}
+
+.yestera-copyright {
+  grid-column: 1 / -1;
+}
+
+.yestera-document {
+  padding-block: clamp(78px, 10vw, 126px);
+}
+
+.yestera-document-hero {
+  max-width: 820px;
+  padding-bottom: clamp(54px, 7vw, 86px);
+}
+
+.yestera-document h1 {
+  margin: 22px 0 24px;
+  font-size: clamp(3.2rem, 7vw, 6.4rem);
+  line-height: 0.96;
+}
+
+.yestera-document-hero > p:not(.yestera-section-kicker, .yestera-effective-date) {
+  max-width: 660px;
+  margin: 0 0 28px;
+  color: #c7c0b4;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.75;
+}
+
+.yestera-effective-date {
+  margin: 24px 0 0;
+  color: var(--yestera-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.yestera-support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--yestera-line);
+}
+
+.yestera-support-grid article {
+  min-height: 250px;
+  padding: 34px clamp(24px, 4vw, 50px) 40px 0;
+  border-bottom: 1px solid var(--yestera-line);
+}
+
+.yestera-support-grid article:nth-child(even) {
+  padding-left: clamp(24px, 4vw, 50px);
+  border-left: 1px solid var(--yestera-line);
+}
+
+.yestera-support-grid h2,
+.yestera-policy-content h2 {
+  margin: 0 0 16px;
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-size: clamp(1.35rem, 2.3vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.yestera-support-grid p,
+.yestera-support-notes > p,
+.yestera-contact-panel p,
+.yestera-policy-content p {
+  margin: 0;
+  color: var(--yestera-muted);
+  font-size: 0.94rem;
+  line-height: 1.78;
+}
+
+.yestera-support-notes,
+.yestera-contact-panel {
+  margin-top: clamp(66px, 9vw, 108px);
+  padding: clamp(36px, 6vw, 68px);
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(30px, 6vw, 82px);
+  border: 1px solid var(--yestera-line);
+  background: rgba(22, 26, 31, 0.72);
+}
+
+.yestera-support-notes h2,
+.yestera-contact-panel h2 {
+  margin: 18px 0 0;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.03;
+}
+
+.yestera-contact-panel {
+  align-items: end;
+}
+
+.yestera-contact-panel p {
+  margin-top: 20px;
+}
+
+.yestera-contact-panel p a,
+.yestera-policy-content a {
+  color: var(--yestera-paper);
+  text-decoration: underline;
+  text-decoration-color: rgba(232, 223, 206, 0.4);
+}
+
+.yestera-policy-intro {
+  margin-bottom: 64px;
+  padding: clamp(28px, 5vw, 46px);
+  border-left: 2px solid var(--yestera-sun);
+  background: rgba(226, 165, 92, 0.06);
+}
+
+.yestera-policy-intro strong {
+  display: block;
+  color: var(--yestera-sun);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.yestera-policy-intro p {
+  max-width: 830px;
+  margin: 14px 0 0;
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  line-height: 1.35;
+}
+
+.yestera-policy-content {
+  max-width: 880px;
+  counter-reset: policy;
+}
+
+.yestera-policy-content section {
+  padding: 0 0 46px;
+  margin-bottom: 46px;
+  border-bottom: 1px solid var(--yestera-line);
+}
+
+.yestera-policy-content p + p {
+  margin-top: 18px;
+}
+
+@media (max-width: 820px) {
+  .yestera-header {
+    min-height: 78px;
+  }
+
+  .yestera-nav {
+    gap: 16px;
+    font-size: 0.78rem;
+  }
+
+  .yestera-hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .yestera-hero-art {
+    min-height: 450px;
+  }
+
+  .yestera-sun-disc {
+    right: 12%;
+  }
+
+  .yestera-closing,
+  .yestera-support-notes,
+  .yestera-contact-panel {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 620px) {
+  .yestera-header,
+  .yestera-footer,
+  .yestera-hero,
+  .yestera-manifesto,
+  .yestera-features,
+  .yestera-closing,
+  .yestera-document {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .yestera-wordmark span {
+    display: none;
+  }
+
+  .yestera-nav {
+    width: min(100%, 260px);
+    justify-content: space-between;
+  }
+
+  .yestera-hero {
+    padding-top: 58px;
+  }
+
+  .yestera-hero h1 {
+    font-size: clamp(3rem, 16vw, 4.5rem);
+  }
+
+  .yestera-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .yestera-hero-art {
+    min-height: 390px;
+  }
+
+  .yestera-photo-stack,
+  .yestera-icon-mount {
+    width: min(70vw, 315px);
+  }
+
+  .yestera-manifesto {
+    padding-inline: 24px;
+  }
+
+  .yestera-feature-grid,
+  .yestera-support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yestera-feature-grid article,
+  .yestera-feature-grid article:nth-child(even),
+  .yestera-support-grid article,
+  .yestera-support-grid article:nth-child(even) {
+    min-height: auto;
+    padding: 30px 0 34px;
+    border-left: 0;
+  }
+
+  .yestera-feature-grid h3 {
+    margin-top: 26px;
+  }
+
+  .yestera-closing {
+    margin-bottom: 48px;
+    padding: 34px 25px;
+  }
+
+  .yestera-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .yestera-footer-links {
+    justify-content: flex-start;
+  }
+
+  .yestera-copyright {
+    grid-column: auto;
+  }
+
+  .yestera-document {
+    padding-top: 64px;
+  }
+
+  .yestera-document h1 {
+    font-size: clamp(3rem, 15vw, 4.4rem);
+  }
+
+  .yestera-support-notes,
+  .yestera-contact-panel {
+    padding: 28px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yestera-site *,
+  .yestera-site *::before,
+  .yestera-site *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
