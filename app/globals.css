@@ -4,7 +4,7 @@
 
 :root {
   color-scheme: dark;
-  --site-display-title-size: clamp(4rem, 8vw, 7.6rem);
+  --site-display-title-size: clamp(3.25rem, 5.5vw, 5.25rem);
 }
 
 html {
