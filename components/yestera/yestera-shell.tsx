@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { yesteraAppStoreURL } from "@/content/apps-content";
 
 type YesteraPage = "home" | "support" | "privacy";
 
@@ -45,6 +46,9 @@ export function YesteraShell({
               {item.label}
             </Link>
           ))}
+          <a href={yesteraAppStoreURL} target="_blank" rel="noreferrer">
+            Download
+          </a>
         </nav>
       </header>
 
@@ -60,6 +64,9 @@ export function YesteraShell({
         <div className="yestera-footer-links">
           <Link href="/yestera/support">Support</Link>
           <Link href="/yestera/privacy">Privacy</Link>
+          <a href={yesteraAppStoreURL} target="_blank" rel="noreferrer">
+            App Store
+          </a>
           <Link href="/">Nathan Darker</Link>
         </div>
         <p className="yestera-copyright">© 2026 Nathan Darker</p>

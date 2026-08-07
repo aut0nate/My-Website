@@ -3,7 +3,7 @@ import { AppArtwork } from "@/components/app-artwork";
 import {
   AppGitHubLink,
   AppPrimaryLink,
-  AppStorePlaceholder
+  AppStoreLink
 } from "@/components/app-links";
 import { AppsConceptShell } from "@/components/apps-concept-shell";
 import { appsContent } from "@/content/apps-content";
@@ -52,7 +52,7 @@ export default function LibraryAppsConcept() {
                   <span>{app.label}</span>
                   <h2>{app.name}</h2>
                 </div>
-                <AppStorePlaceholder app={app} className="apps-icon-button" />
+                <AppStoreLink app={app} className="apps-icon-button" />
                 <AppGitHubLink app={app} className="apps-icon-button" />
               </div>
               <p>{app.description}</p>

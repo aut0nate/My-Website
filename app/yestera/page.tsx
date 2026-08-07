@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { YesteraShell } from "@/components/yestera/yestera-shell";
+import { yesteraAppStoreURL } from "@/content/apps-content";
 
 const features = [
   {
@@ -44,7 +45,21 @@ export default function YesteraPage() {
             in a calm, modern experience built around your Photos library.
           </p>
           <div className="yestera-hero-actions">
-            <span className="yestera-coming-soon">Coming soon to the App Store</span>
+            <a
+              className="yestera-app-store-badge"
+              href={yesteraAppStoreURL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Download Yestera on the App Store"
+            >
+              <Image
+                src="/images/yestera/download-on-the-app-store.svg"
+                width={120}
+                height={40}
+                alt=""
+                priority
+              />
+            </a>
             <Link className="yestera-text-link" href="/yestera/privacy">
               Read our privacy promise <span aria-hidden="true">↗</span>
             </Link>

@@ -644,7 +644,6 @@ img {
   gap: 22px 28px;
 }
 
-.yestera-coming-soon,
 .yestera-support-button {
   min-height: 50px;
   display: inline-flex;
@@ -660,6 +659,21 @@ img {
   font-weight: 700;
   letter-spacing: 0.025em;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.25);
+}
+
+.yestera-app-store-badge {
+  display: inline-flex;
+  width: 168px;
+  min-height: 50px;
+  flex: 0 0 auto;
+  border-radius: 7px;
+  outline-offset: 5px;
+}
+
+.yestera-app-store-badge img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 a.yestera-support-button {
