@@ -10,23 +10,24 @@ export function AppPrimaryLink({
   app: PortfolioApp;
   className?: string;
 }) {
+  const destination = app.appStoreUrl ?? app.siteUrl;
   const content = (
     <>
-      <span>{app.kind === "iOS" ? "Explore Yestera" : "Open app"}</span>
+      <span>{app.kind === "iOS" ? "Download Yestera" : "Open app"}</span>
       <ArrowIcon className="h-4 w-4" />
     </>
   );
 
-  if (app.siteUrl.startsWith("/")) {
+  if (destination.startsWith("/")) {
     return (
-      <Link className={className} href={app.siteUrl}>
+      <Link className={className} href={destination}>
         {content}
       </Link>
     );
   }
 
   return (
-    <a className={className} href={app.siteUrl} target="_blank" rel="noreferrer">
+    <a className={className} href={destination} target="_blank" rel="noreferrer">
       {content}
     </a>
   );
@@ -57,25 +58,27 @@ export function AppGitHubLink({
   );
 }
 
-export function AppStorePlaceholder({
+export function AppStoreLink({
   app,
   className
 }: {
   app: PortfolioApp;
   className?: string;
 }) {
-  if (app.kind !== "iOS") {
+  if (!app.appStoreUrl) {
     return null;
   }
 
   return (
-    <span
-      className={[className, "is-placeholder"].filter(Boolean).join(" ")}
-      role="img"
-      aria-label="App Store link coming soon"
-      title="App Store link coming soon"
+    <a
+      className={className}
+      href={app.appStoreUrl}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`Download ${app.name} on the App Store`}
+      title={`Download ${app.name} on the App Store`}
     >
       <AppStoreIcon className="h-5 w-5" />
-    </span>
+    </a>
   );
 }

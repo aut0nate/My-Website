@@ -4,10 +4,14 @@ export type PortfolioApp = {
   label: string;
   description: string;
   siteUrl: string;
+  appStoreUrl?: string;
   githubUrl?: string;
   artwork: "yestera" | "prompts" | "gallery" | "collection";
   featured?: boolean;
 };
+
+export const yesteraAppStoreURL =
+  "https://apps.apple.com/gb/app/yestera/id6794884597";
 
 export const appsContent = {
   eyebrow: "Apps by Nathan Darker",
@@ -22,6 +26,7 @@ export const appsContent = {
       description:
         "Rediscover photographs and videos from this day across the years, in a calm experience built around your Photos library.",
       siteUrl: "/yestera/",
+      appStoreUrl: yesteraAppStoreURL,
       artwork: "yestera",
       featured: true
     },
