@@ -53,9 +53,9 @@ export default function YesteraPage() {
               aria-label="Download Yestera on the App Store"
             >
               <Image
-                src="/images/yestera/download-on-the-app-store.png"
-                width={282}
-                height={84}
+                src="/images/yestera/download-on-the-app-store.svg"
+                width={120}
+                height={40}
                 alt=""
                 priority
               />
