@@ -6,7 +6,7 @@
 - Designed for local development first, then static deployment to Cloudflare Pages
 
 ## Tools, languages, and frameworks
-- Next.js 14 with App Router
+- Next.js 15 with App Router
 - TypeScript
 - Tailwind CSS
 - Cloudflare Pages for hosting
@@ -16,6 +16,7 @@
 - `npm run dev`
 - `npm run build`
 - `npm run lint`
+- `npm audit --audit-level=high`
 
 ## Project structure
 - `app/` route files and global styles
