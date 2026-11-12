@@ -53,5 +53,7 @@
 ## Constraints and project rules
 - Keep the UI fast and visually restrained
 - Maintain the dark glass-inspired design language
+- The Apps portfolio is currently withdrawn: do not publish `/apps`, its concept pages, or the legacy `/projects` route, or add navigation links to them unless requested
+- Keep the separate Yestera landing, support, and privacy pages available
 - Do not add a backend or contact form unless requested
 - Treat blog and social destinations as external links in v1
